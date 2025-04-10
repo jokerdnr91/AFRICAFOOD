@@ -6,7 +6,6 @@
   <title>Restaurant & Fidélité</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.css" rel="stylesheet" />
-  <script src="script.js" defer></script>
   <style>
     body { opacity: 0; transition: opacity 0.8s ease-in-out; }
     body.fade-in { opacity: 1; }
@@ -16,7 +15,7 @@
 </head>
 <body>
   <header>
-    <h1>Bienvenue au AFRICANFOOD 17 </h1>
+    <h1>Bienvenue au [Nom du Restaurant]</h1>
     <nav>
       <ul>
         <li><a href="#accueil">Accueil</a></li>
@@ -31,8 +30,8 @@
   </header>
 
   <section id="accueil" class="active">
-    <h2>Un lieu unique pour déguster de savoureux plats AUTENTIQUE </h2>
-    <p>Découvrez une expérience culinaire inoubliable dans un cadre chaleureux</p>
+    <h2>Un lieu unique pour déguster de savoureux plats</h2>
+    <p>Découvrez une expérience culinaire inoubliable dans un cadre chaleureux et chic.</p>
   </section>
 
   <section id="menu">
@@ -91,5 +90,8 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-firestore.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
