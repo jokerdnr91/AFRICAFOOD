@@ -1,14 +1,3 @@
-// Initialisation Firebase
-const firebaseConfig = {
-  apiKey: "AIzaSyBJuhqmuxlJWonHHlCtLN1j7ANqHusCG9Q",
-  authDomain: "africanfood17-fbeac.firebaseapp.com",
-  projectId: "africanfood17-fbeac",
-  storageBucket: "africanfood17-fbeac.firebasestorage.app",
-  messagingSenderId: "1096962889528",
-  appId: "1:1096962889528:web:2c3962097ff309f9e913cd"
-};
-firebase.initializeApp(firebaseConfig);
-const db = firebase.firestore();
 
 document.addEventListener('DOMContentLoaded', () => {
   document.body.classList.add('fade-in');
@@ -80,13 +69,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const found = clients.find(c => c.nom.toLowerCase() === search || c.email.toLowerCase() === search);
 
     if (found) {
-      resultBox.innerHTML = `
+      resultBox.innerHTML = 
         <p><strong>Nom :</strong> ${found.nom}</p>
         <p><strong>Email :</strong> ${found.email}</p>
         <p><strong>Points :</strong> <span id="pointsDisplay">${found.points}</span></p>
         <button id="addPoint">+ Ajouter 1 point</button>
         <button id="removePoint">– Retirer 1 point</button>
-      `;
+      ;
       document.getElementById('addPoint').addEventListener('click', async () => {
         await db.collection("clients").doc(found.id).update({ points: found.points + 1 });
         document.getElementById('pointsDisplay').innerText = found.points + 1;
@@ -106,8 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const showAllClientsBtn = document.getElementById('showAllClients');
   const clientList = document.getElementById('clientList');
 
-  showAllClientsBtn?.addEventListener('click', async () => {
-    const snapshot = await db.collection("clients").get();
+  showAllClientsBtn?.addEventListener('click', async () => {const snapshot = await db.collection("clients").get();
     clientList.innerHTML = '';
     if (snapshot.empty) {
       clientList.innerHTML = '<li>Aucun client enregistré.</li>';
@@ -115,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
       snapshot.forEach(doc => {
         const c = doc.data();
         const li = document.createElement('li');
-        li.textContent = `${c.nom} (${c.email}) – ${c.points} point(s)`;
+        li.textContent = ${c.nom} (${c.email}) – ${c.points} point(s);
         clientList.appendChild(li);
       });
     }
