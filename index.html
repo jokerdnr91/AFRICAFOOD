@@ -36,14 +36,35 @@
 
   <section id="menu">
     <h2>Notre Menu</h2>
-    <article><h3>Entrées</h3><ul><li>Salade César</li><li>Soupe du jour</li></ul></article>
-    <article><h3>Plats</h3><ul><li>Poulet rôti</li><li>Risotto</li></ul></article>
-    <article><h3>Desserts</h3><ul><li>Tarte Tatin</li><li>Mousse chocolat</li></ul></article>
+    <article>
+      <h3>Entrées</h3>
+      <ul>
+        <li>Salade César</li>
+        <li>Soupe du jour</li>
+      </ul>
+    </article>
+    <article>
+      <h3>Plats</h3>
+      <ul>
+        <li>Poulet rôti</li>
+        <li>Risotto</li>
+      </ul>
+    </article>
+    <article>
+      <h3>Desserts</h3>
+      <ul>
+        <li>Tarte Tatin</li>
+        <li>Mousse chocolat</li>
+      </ul>
+    </article>
   </section>
 
   <section id="promotions">
     <h2>Promotions</h2>
-    <ul><li>10% après 5 visites</li><li>Dessert offert à la 10ème</li></ul>
+    <ul>
+      <li>10% après 5 visites</li>
+      <li>Dessert offert à la 10ème</li>
+    </ul>
   </section>
 
   <section id="reservation">
@@ -90,8 +111,22 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js"></script>
+
+  <!-- Firebase SDK -->
   <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-firestore.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyBJuhqmuxlJWonHHlCtLN1j7ANqHusCG9Q",
+      authDomain: "africanfood17-fbeac.firebaseapp.com",
+      projectId: "africanfood17-fbeac",
+      storageBucket: "africanfood17-fbeac.firebasestorage.app",
+      messagingSenderId: "1096962889528",
+      appId: "1:1096962889528:web:2c3962097ff309f9e913cd"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+  </script>
   <script src="script.js"></script>
 </body>
 </html>
