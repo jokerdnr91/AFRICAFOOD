@@ -25,7 +25,7 @@ registerForm.addEventListener("submit", async (e) => {
       nom,
       email,
       points: 0
-    });
+        
     document.getElementById("confirmationFidelite").textContent = "Client inscrit avec succès !";
     registerForm.reset();
   } catch (error) {
