@@ -1,32 +1,4 @@
-import { initializeApp } from "firebase/app";
-import { getFirestore, collection, addDoc, getDocs, query, where } from "firebase/firestore";
-
-const firebaseConfig = {
-  apiKey: "AIzaSyBJuhqmuxlJWonHHlCtLN1j7ANqHusCG9Q",
-  authDomain: "africanfood17-fbeac.firebaseapp.com",
-  projectId: "africanfood17-fbeac",
-  storageBucket: "africanfood17-fbeac.firebaseapp.com",
-  messagingSenderId: "1096962889528",
-  appId: "1:1096962889528:web:2c3962097ff309f9e913cd"
-};
-
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
-
-// Enregistrement client fidélité
-const registerForm = document.getElementById("registerForm");
-registerForm.addEventListener("submit", async (e) => {
-  e.preventDefault();
-  const nom = document.getElementById("nomFidelite").value;
-  const email = document.getElementById("emailFidelite").value;
-
-  try {
-    await addDoc(collection(db, "clients"), {
-      nom,
-      email,
-      points: 0
-        
-    document.getElementById("confirmationFidelite").textContent = "Client inscrit avec succès !";
+document.getElementById("confirmationFidelite").textContent = "Client inscrit avec succès !";
     registerForm.reset();
   } catch (error) {
     console.error("Erreur d'inscription :", error);
